@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/webp" href="images/fe-ico.webp">
+    <title>Red Rose Bouquet Online | Buy Fresh Roses at ₹899 – Fervour</title>
+<meta name="description" content="Buy fresh Red Rose Bouquet online from Fervour at ₹899. Handcrafted roses with same-day delivery available across India. Perfect for birthdays, anniversaries, and special moments.">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">  
+
+    
+<link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+
+
+
+    .bi-check-circle-fill{
+        color:var(--headingcta);
+
+    }
+
+ 
+   /* Make nav-pills text color black */
+.nav-pills .nav-link {
+    color: black !important; /* Ensures text stays black */
+}
+
+/* Ensure active tab text remains black */
+.nav-pills .nav-link.active {
+    color: #fff !important;
+     border-radius: 10px;
+}
+
+
+
+        .nav-pills {
+            display: flex;
+            gap: 15px;
+        }
+        
+        /* Center thumbnails */
+        .nav-pills.justify-content-center {
+            text-align: center;
+        }
+        
+        /* Styling for thumbnail images */
+        .navg {
+            width: 60px;
+            height: 50px;
+            border-radius: 10px;
+            cursor: pointer;
+             object-fit: cover;
+            gap: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        /* Main image styling */
+        .navbg{
+            width: 100%;
+            height:380px;
+             border-radius: 15px;
+            object-fit: cover;
+            background:#fff;
+            padding:10px;
+        }
+
+
+
+.form .form-control,
+.form .btn {
+  margin-top: 10px;
+  height: 45px;
+  opacity: 1;
+}
+
+
+
+.carousel {
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll 10s linear infinite;
+}
+
+.group {
+  display: flex;
+  gap: 20px;
+  padding-right: 20px;
+}
+
+.review-card {
+  min-width: 300px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+
+  
+</style>
+</head>
+<body class="websitebg">
+
+
+<header class="sticky-top">
+  <nav class="navbar bg-white border-bottom" id="navbar">
+
+    <!-- ================= ROW 1 ================= -->
+    <div class="container d-flex align-items-center justify-content-between py-2">
+
+      <!-- LEFT: LOGO + DELIVERY -->
+      <div class="d-flex align-items-center gap-3">
+         <a href="index.html" class="navbar-brand m-0">
+                 <img
+                   src="images/logo.webp"
+                   alt="Fervour Logo"
+                   width="150"
+                   height="90"
+                   loading="eager"
+                   fetchpriority="high">
+        </a>
+
+        <!-- DELIVERY (DESKTOP) -->
+        <button
+          type="button"
+          class="btn  d-none d-lg-block"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal2"
+          aria-label="Delivery Location">
+          Where to deliver? <i class="bi bi-geo-alt"></i>
+        </button>
+      </div>
+
+      <!-- CENTER: SEARCH (DESKTOP) -->
+      <div class="d-none d-md-block flex-grow-1 px-4">
+        <form class="header-form-search" action="/search" method="get">
+          <input
+            class="formControl"
+            type="text"
+            name="q"
+            title="Search for products"
+            placeholder="Search for products"
+            autocomplete="off">
+
+          <input type="hidden" name="otracker" value="search">
+          <input type="hidden" name="otracker1" value="search">
+          <input type="hidden" name="marketplace" value="FLIPKART">
+          <input type="hidden" name="as-show" value="on">
+          <input type="hidden" name="as" value="off">
+        </form>
+      </div>
+
+
+      <!-- RIGHT: DESKTOP ICONS -->
+      <div class="d-none d-md-flex align-items-center gap-3">
+        <button
+          class="sick-icons"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          aria-label="Account">
+          <i class="bi bi-person"></i>
+        </button>
+
+        <a href="cart.html" class="sick-icons" aria-label="Cart">
+          <i class="bi bi-cart"></i>
+        </a>
+      </div>
+
+      <!-- MOBILE: SEARCH + TOGGLER -->
+      <div class="d-flex d-md-none align-items-center gap-2 ms-auto">
+
+        <!-- SEARCH -->
+        <button
+          class="sick-icons"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal1"
+          aria-label="Search">
+          <i class="bi bi-search"></i>
+        </button>
+
+        <!-- HAMBURGER -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ================= ROW 2 ================= -->
+    <div class="container d-none d-md-flex justify-content-center border-top">
+      <ul class="navbar-nav flex-row gap-4 py-2">
+        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="occasion-main.html">Occasion</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- ================= OFFCANVAS MOBILE MENU ================= -->
+    <div class="offcanvas offcanvas-end d-md-none" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav gap-2">
+ 
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="occasion-main.html">Occasion</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="exotic.html">Exotic</a></li>
+
+          <hr>
+
+          <li class="nav-item"><a class="nav-link" href="#">My Orders</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">My Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">My Wishlist</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">My Account</a></li>
+
+          <hr>
+
+          <li class="nav-item"><a class="nav-link" href="#">Legal</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Log Out</a></li>
+
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+</header>
+
+
+
+
+
+
+<main>
+
+     <!-- breadcrumb -->
+        <section class="breadcrumb">
+             <div class="container py-3">
+              <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item text-primary"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Red Roses</li>
+                  </ol>
+                </nav>
+           </div>
+        </section>
+          
+
+                    
+           <section class="product">
+                 <div class="container">
+                      <div class="row">
+                          <!-- Desktop View (lg and above) -->
+                          <div class="col-12 col-lg-5 d-none d-lg-block">
+                              <div class="d-flex align-items-center">
+                                  <!-- Thumbnail Navigation -->
+                                  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                      <button class="nav-link active" id="v-pills-rose1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-rose1" type="button" role="tab" aria-controls="v-pills-rose1" aria-selected="true">
+                                           <img src="images/product (1).webp" alt="PinkRoses1" class="navg">
+                                      </button>
+                                      <button class="nav-link" id="v-pills-rose2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-rose2" type="button" role="tab" aria-controls="v-pills-rose2" aria-selected="false">
+                                          <img src="images/product (01).webp" alt="PinkRose" class="navg">
+                                      </button>
+                                  </div>
+                                  <!-- Main Image Display -->
+                                  <div class="tab-content" id="v-pills-tabContent">
+                                      <div class="tab-pane fade show active" id="v-pills-rose1" role="tabpanel" aria-labelledby="v-pills-rose1-tab">
+                                          <img src="images/product (1).webp" alt="PinkRoses1" class="navbg">
+                                      </div>
+                                      <div class="tab-pane fade" id="v-pills-rose2" role="tabpanel" aria-labelledby="v-pills-rose2-tab">
+                                          <img src="images/product (01).webp" alt="PinkRose" class="navbg">
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+              
+                          <!-- Mobile View (Below lg) -->
+                          <div class="col-12 col-lg-7 py-3 d-lg-none">
+                              <!-- Main Image Display for Mobile -->
+                              <div class="tab-content text-center" id="pills-tabContent">
+                                  <div class="tab-pane fade show active" id="pills-rose1" role="tabpanel" aria-labelledby="pills-rose1-tab">
+                                       <img src="images/product (1).webp" alt="PinkRoses1" class="navbg">
+                                  </div>
+                                  <div class="tab-pane fade" id="pills-rose2" role="tabpanel" aria-labelledby="pills-rose2-tab">
+                                      <img src="images/product (01).webp" alt="PinkRose" class="navbg">
+                                  </div>
+                              </div>
+              
+                              <!-- Thumbnail Navigation for Mobile -->
+                              <div class="col-12">
+                                  <ul class="nav nav-pills justify-content-center mt-3" id="pills-tab" role="tablist">
+                                      <li class="nav-item" role="presentation">
+                                          <button class="nav-link active" id="pills-rose1-tab" data-bs-toggle="pill" data-bs-target="#pills-rose1" type="button" role="tab" aria-controls="pills-rose1" aria-selected="true">
+                                               <img src="images/product (1).webp" alt="PinkRoses1" class="navg">
+                                          </button>
+                                      </li>
+                                      <li class="nav-item" role="presentation">
+                                          <button class="nav-link" id="pills-rose2-tab" data-bs-toggle="pill" data-bs-target="#pills-rose2" type="button" role="tab" aria-controls="pills-rose2" aria-selected="false">
+                                              <img src="images/product (01).webp" alt="PinkRose" class="navg">
+                                          </button>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+              
+                          <!-- Product Information Section -->
+                          <div class="col-12 col-lg-4 ">
+                              <div class="container">
+                                  <h2>Rose Bouquet</h2>
+                                  <h5 class="text-start"><span>&#8377;</span>899 (Inclusive of all taxes)</h5>
+                                  <!-- Pincode Check -->
+                                  <div class="pincode-form-container">
+                                    <div class="pincode-form-container">
+                                        <form class="form">
+                                                <div class="input-group">
+                                                      <input  type="text" class="form-control pincode-input" placeholder="Enter Pincode" maxlength="6" required/>
+                                                      <button class="btn" type="submit">Check</button>
+                                                </div>
+                                        </form>
+                                     </div>
+                                  </div>
+                                  <p class="card-text mt-3 text-start"><i class="bi bi-check-circle-fill"></i> In stock</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+           </section>
+                 
+
+
+
+        <div class="container mt-5">
+          <ul class="nav nav-pills mb-3 " id="pills-tab" role="tablist">
+               <li class="nav-item" role="presentation">
+                 <button class="nav-link active" id="pills-discription-tab" data-bs-toggle="pill" data-bs-target="#pills-discription" type="button" role="tab" aria-controls="pills-discription" aria-selected="true">Discription</button>
+               </li>
+               <li class="nav-item" role="presentation">
+                 <button class="nav-link" id="pills-reviews-tab" data-bs-toggle="pill" data-bs-target="#pills-reviews" type="button" role="tab" aria-controls="pills-reviews" aria-selected="false">Reviews</button>
+               </li>
+             </ul>
+             <div class="tab-content" id="pills-tabContent">
+               <div class="tab-pane fade show active" id="pills-discription" role="tabpanel" aria-labelledby="pills-discription-tab" tabindex="0">Soft, delicate, and effortlessly charming, each pink rose in this handcrafted bouquet tells a story of gentle love and appreciation. The blush hue of these blooms evokes feelings of warmth, sweetness, and elegance, making them the perfect gift for expressing gratitude, celebrating milestones, or simply brightening someone's day.
+                  Expertly arranged with fresh, premium-grade roses, this bouquet is wrapped with care and a touch of sophistication, making it ready to impress the moment it’s delivered. Whether it’s for a birthday, anniversary, or just because, our Pink Rose Bouquet is a beautiful way to say everything without saying a word.                 
+                  Each bouquet is thoughtfully prepared to ensure freshness and longevity, arriving in elegant packaging that reflects the quality and love behind every petal.                 
+               </div>
+               <div class="tab-pane fade" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab" tabindex="0">No Reviews</div>
+             </div>
+        </div>
+       
+
+
+       <section class="mt-5">
+  <div class="container">
+    <h2>Similar Products</h2>
+
+    <div class="row g-4">
+
+      <!-- CARD 1 -->
+     <div class="col-12 col-md-6 col-lg-3">
+        <div class="card btn-cardlink">
+          <img src="images/product (6).webp" class="card-img-top" alt="Yellow Roses">
+
+          <div class="wrapper">
+            <div class="icon-wishlist"></div>
+            <div class="popover"></div>
+          </div>
+
+          <div class="card-body">
+            <h3>Yellow Roses</h3>
+            <p><span>&#8377;</span>700</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+     <div class="col-12 col-md-6 col-lg-3">
+        <div class="card btn-cardlink">
+          <img src="images/product (11).webp" class="card-img-top" alt="Pink Tulips">
+
+          <div class="wrapper">
+            <div class="icon-wishlist"></div>
+            <div class="popover"></div>
+          </div>
+
+          <div class="card-body">
+            <h3>Pink Tulips</h3>
+            <p><span>&#8377;</span>859</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card btn-cardlink">
+          <img src="images/product (14).webp" class="card-img-top" alt="Delight Wrap">
+
+          <div class="wrapper">
+            <div class="icon-wishlist"></div>
+            <div class="popover"></div>
+          </div>
+
+          <div class="card-body">
+            <h3 class="card-title">Delight Wrap</h3>
+            <p><span>&#8377;</span>1099</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+     <div class="col-12 col-md-6 col-lg-3">
+        <div class="card btn-cardlink">
+          <img src="images/snake-plant.webp" class="card-img-top" alt="Snake Plant">
+
+          <div class="wrapper">
+            <div class="icon-wishlist"></div>
+            <div class="popover"></div>
+          </div>
+
+          <div class="card-body">
+            <h3>Snake Plant</h3>
+            <p><span>&#8377;</span>299</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+        
+     
+     </main>
+       
+
+
+           
+<!-- footer -->
+<footer class="premium mt-5 py-5">
+   <div class="social-container">
+  <h2>Connect with us</h2>
+
+  <div class="social-row">
+    <a href="#"><i class="bi bi-facebook social-icons"></i></a>
+    <a href="#"><i class="bi bi-instagram social-icons"></i></a>
+    <a href="#"><i class="bi bi-x social-icons"></i></a>
+  </div>
+</div>
+         <hr>
+
+         <div class="container text-center mt-3 mb-5">
+                 ©2023 <a href="index.html" class="bottomtag">fervour.com</a> All rights reserved.
+          </div>	   
+</footer>	
+
+
+<!-- modals -->
+		   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-fullscreen-md-down modal-dialog-centered">
+			    <div class="modal-content  py-3">
+				    <div class="modal-header p-0 ms-0 pb-3 border-1 border-bottom border-black">
+					    <h6>Login</h6>
+				    </div>
+				    <div class="modal-body">
+							<form>
+							    <div class="mb-3">
+								   <input type="text" name="uname" placeholder="Enter Email"
+									  onblur="return validateForm()" required>
+								   <span id="errorContact"></span>
+                   </div>
+	
+                   <div class="mb-3">
+								   <input type="password" placeholder="Enter Password" name="psw" required>
+                   </div>
+
+								   <input type="submit" value="Login">
+								   <input type="button" value="Cancel" data-bs-dismiss="modal">
+
+							</form>
+				    </div>
+				    <div class="modal-footer">
+					    <span class="signIn"><a href="#">Sign-in</a></span>
+				    </div>
+			    </div>
+			  </div>
+		 </div> 
+
+
+       <!-- location modal-->
+			             <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						     <div class="modal-dialog modal-md modal-dialog-centered">
+                                        <div class="modal-content py-3">
+                                                         <div class="modal-header m-0 border-1 border-bottom border-black p-0">
+                                                                        <h6><i class="bi bi-geo-alt"></i>Location</h6>
+                                                         </div>     
+                                                         <div class="modal-body p-3">
+                                                                      <form>
+                                                                                <input type="text" class="form-control" id="locationInput" placeholder="City / Area">
+
+																<div class="mt-3">
+                                                                                  <input type="text" class="form-control" id="pincode" placeholder="Pin code">
+                                                                                </div>
+
+																<div class="text-end mt-3">
+                                                                                    <input type="submit" class="" value="Submit">
+                                                                                </div>
+														</form>
+                                                         </div>
+                                        </div>
+
+					          </div>
+					   </div>	
+
+
+
+     
+
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-md modal-dialog-centered">
+			    <div class="modal-content  py-3">
+				   <div class="modal-body">
+							 <form class="header-form-search" action="/search" method="get">
+          <input
+            class="formControl"
+            type="text"
+            name="q"
+            title="Search for products"
+            placeholder="Search for products"
+            autocomplete="off">
+
+          <input type="hidden" name="otracker" value="search">
+          <input type="hidden" name="otracker1" value="search">
+          <input type="hidden" name="marketplace" value="FLIPKART">
+          <input type="hidden" name="as-show" value="on">
+          <input type="hidden" name="as" value="off">
+        </form>
+				   </div>
+			    </div>
+			</div>
+		 </div> 
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/style.js" defer></script>
+
+</body>
+</html>

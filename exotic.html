@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/webp" href="images/fe-ico.webp">
+<title>Exotic Flowers & Premium Plants Online | Fervour</title>
+<meta name="description" content="Shop exotic flowers and premium plants online at Fervour. Discover rare blooms, luxury bouquets, and unique floral arrangements delivered fresh across India.">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">  
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+<style>
+</style>
+</head>
+<body class="websitebg">
+
+
+<header class="sticky-top">
+  <nav class="navbar bg-white border-bottom" id="navbar">
+
+    <!-- ================= ROW 1 ================= -->
+    <div class="container d-flex align-items-center justify-content-between py-2">
+
+      <!-- LEFT: LOGO + DELIVERY -->
+      <div class="d-flex align-items-center gap-3">
+         <a href="index.html" class="navbar-brand m-0">
+                 <img
+                   src="images/logo.webp"
+                   alt="Fervour Logo"
+                   width="150"
+                   height="90"
+                   loading="eager"
+                   fetchpriority="high">
+        </a>
+
+        <!-- DELIVERY (DESKTOP) -->
+        <button
+          type="button"
+          class="btn  d-none d-lg-block"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal2"
+          aria-label="Delivery Location">
+          Where to deliver? <i class="bi bi-geo-alt"></i>
+        </button>
+      </div>
+
+      <!-- CENTER: SEARCH (DESKTOP) -->
+      <div class="d-none d-md-block flex-grow-1 px-4">
+        <form class="header-form-search" action="/search" method="get">
+          <input
+            class="formControl"
+            type="text"
+            name="q"
+            title="Search for products, brands"
+            placeholder="Search for products"
+            autocomplete="off">
+
+          <input type="hidden" name="otracker" value="search">
+          <input type="hidden" name="otracker1" value="search">
+          <input type="hidden" name="marketplace" value="FLIPKART">
+          <input type="hidden" name="as-show" value="on">
+          <input type="hidden" name="as" value="off">
+        </form>
+      </div>
+
+
+      <!-- RIGHT: DESKTOP ICONS -->
+      <div class="d-none d-md-flex align-items-center gap-3">
+        <button
+          class="sick-icons"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          aria-label="Account">
+          <i class="bi bi-person"></i>
+        </button>
+
+        <a href="cart.html" class="sick-icons" aria-label="Cart">
+          <i class="bi bi-cart"></i>
+        </a>
+      </div>
+
+      <!-- MOBILE: SEARCH + TOGGLER -->
+      <div class="d-flex d-md-none align-items-center gap-2 ms-auto">
+
+        <!-- SEARCH -->
+        <button
+          class="sick-icons"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal1"
+          aria-label="Search">
+          <i class="bi bi-search"></i>
+        </button>
+
+        <!-- HAMBURGER -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ================= ROW 2 ================= -->
+    <div class="container d-none d-md-flex justify-content-center border-top">
+      <ul class="navbar-nav flex-row gap-4 py-2">
+        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="occasion-main.html">Occasion</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- ================= OFFCANVAS MOBILE MENU ================= -->
+    <div class="offcanvas offcanvas-end d-md-none" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav gap-2">
+ 
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="occasion-main.html">Occasion</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="exotic.html">Exotic</a></li>
+
+          <hr>
+
+          <li class="nav-item"><a class="nav-link" href="#">My Orders</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">My Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">My Wishlist</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">My Account</a></li>
+
+          <hr>
+
+          <li class="nav-item"><a class="nav-link" href="#">Legal</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Log Out</a></li>
+
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+</header>
+
+
+
+
+
+
+<main>
+
+     <!-- breadcrumb -->
+        <section class="breadcrumb">
+             <div class="container py-3">
+              <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item text-primary"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Exotic</li>
+                  </ol>
+                </nav>
+           </div>
+        </section>
+          
+
+                   <section class="shop-layout">
+
+    <!-- LEFT FILTER SIDEBAR (OUTSIDE CONTAINER) -->
+    <aside class="filter-sidebar d-none d-lg-block">
+
+        <div class="card-header py-1 pb-1 border-1 border border-dark">
+            <h4>Filters</h4>
+        </div>
+
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+
+            <!-- PRICE FILTER -->
+            <div class="accordion-item">
+                <h2 class="accordion-header border-1 border border-dark" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne"
+                            aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                        Price
+                    </button>
+                </h2>
+
+                <div id="panelsStayOpen-collapseOne"
+                     class="accordion-collapse collapse show"
+                     aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body border-1 border border-dark">
+                        <div style="height:230px;">
+                              <form>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="amount">Price Range:</label>
+                                        </div>
+
+                                        <div class="col-12 mt-3">
+                                            <div id="slider-range" style="height:10px;"></div>
+                                        </div>
+
+                                        <div class="col-6 mt-3">
+                                            <label for="min-price">Min:</label>
+                                            <input type="number" id="min-price" class="form-control" value="299">
+                                        </div>
+
+                                        <div class="col-6 mt-3">
+                                            <label for="max-price">Max:</label>
+                                            <input type="number" id="max-price" class="form-control" value="2500">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="mt-auto d-flex justify-content-end">
+                                        <button type="button" class="btn mt-5 px-4">
+                                            Apply
+                                        </button>
+                                    </div>
+
+                                </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORY FILTER -->
+            <div class="accordion-item">
+                <h2 class="accordion-header border-1 border border-dark" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                        Categories
+                    </button>
+                </h2>
+
+                <div id="panelsStayOpen-collapseTwo"
+                     class="accordion-collapse collapse show"
+                     aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="accordion-body border-1 border border-dark">
+                        <div style="height:310px;">
+                           <form>
+                                    <div class="row">
+                                        <div class="col">
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="category1" value="option1">
+                                                <label class="form-check-label" for="category1">Roses</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="category2" value="option2">
+                                                <label class="form-check-label" for="category2">Tulips</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="category3" value="option3">
+                                                <label class="form-check-label" for="category3">Lily</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="category4" value="option4">
+                                                <label class="form-check-label" for="category4">Carnations</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="category5" value="option5">
+                                                <label class="form-check-label" for="category5">Cactus</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="category6" value="option6">
+                                                <label class="form-check-label" for="category6">Others</label>
+                                            </div>
+
+                                        </div>         
+                                    </div>
+
+                                   <div class="mt-auto d-flex justify-content-end">
+                                        <button type="button" class="btn mt-5 px-4">
+                                            Apply
+                                        </button>
+                                    </div>
+                            </form>              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- PRODUCTS SECTION (INSIDE CONTAINER) -->
+    <div class="products-area">
+        <div class="container text-left">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3">
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                                <div class="card  btn-cardlink">
+                                                    <img src="images/product (5).webp" class="card-img-top" alt="liliess">
+
+                                                    <div class="wrapper">
+                                              <div class="icon-wishlist"></div>	
+                                              <div class="popover"></div>					   
+                                          </div>	
+                                                    <div class="card-body">
+                                                            <h5 class="card-title">Lilies</h5>
+                                                            <p class="card-text"><span>&#8377</span>1399</p> 
+                                                             <button type="button" class="btn btn-add">Add To Cart</button>                                                                       
+
+                                                    </div>
+                                                </div>
+                                    </div>   
+                               
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <div class="card  btn-cardlink">
+                                            <img src="images/product (19).webp" class="card-img-bottom" alt="peonies">
+                                                    <div class="wrapper">
+                                              <div class="icon-wishlist"></div>	
+                                              <div class="popover"></div>					   
+                                          </div>	
+                                            <div class="card-body">
+                                                    <h5 class="card-title">Peonies</h5>
+                                                    <p class="card-text"><span>&#8377</span>1299</p> 
+                                             <button type="button" class="btn btn-add">Add To Cart</button>                                                      </div>
+                                        </div>
+                                    </div> 
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                                <div class="card btn-cardlink">
+                                                    <img src="images/product (20).webp" class="card-img-top" alt="redroses">
+
+                                                    <div class="wrapper">
+									<div class="icon-wishlist"></div>	
+									<div class="popover"></div>						   
+								   </div>	
+                                                    <div class="card-body">
+                                                            <h5 class="card-title">Blue Roses</h5>
+                                                              <p class="card-text"><span>&#8377</span>899</p>
+                                                              <button type="button" class="btn btn-add">Add To Cart</button>      
+
+                                                    </div>
+                                                </div>
+                                    </div>      
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                                <div class="card btn-cardlink">
+                                                    <img src="images/product (21).webp" class="card-img-top" alt="calla lily">
+
+                                                    <div class="wrapper">
+									<div class="icon-wishlist"></div>	
+									<div class="popover"></div>						   
+								   </div>	
+                                                    <div class="card-body">
+                                                            <h5 class="card-title">Calla Lily</h5>
+                                                              <p class="card-text"><span>&#8377</span>859</p>
+                                                              <button type="button" class="btn btn-add">Add To Cart</button>      
+
+                                                    </div>
+                                                </div>
+                                    </div>  
+                     
+                            <div class="col-12 col-md-6 col-lg-3">
+                             <div class="card btn-cardlink">                                           
+                                <img src="images/product (28).webp" class="card-img-top" alt="chinesemoneyplat">
+                                       <div class="wrapper">
+									<div class="icon-wishlist"></div>	
+									<div class="popover"></div>						   
+								   </div>	
+                                 <div class="card-body">
+                                         <h5 class="card-title">Chinese Money Plant</h5>
+                                         <p class="card-text"><span>&#8377</span>999</p>
+                                            <button type="button" class="btn btn-add">Add To Cart</button>      
+
+                                 </div>
+                             </div>
+                         </div>                                                                           
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card btn-cardlink">
+                                    <img src="images/product (29).webp" class="card-img-top" alt="cactuss">
+                                          <div class="wrapper">
+									<div class="icon-wishlist"></div>	
+									<div class="popover"></div>						   
+								   </div>	
+                                    <div class="card-body">
+                                            <h5 class="card-title">Cactus</h5>
+                                            <p class="card-text"><span>&#8377</span>700</p>
+                                               <button type="button" class="btn btn-add">Add To Cart</button>      
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card btn-cardlink">
+                                    <img src="images/product (7).webp" class="card-img-top" alt="philandendron">
+                                          <div class="wrapper">
+									<div class="icon-wishlist"></div>	
+									<div class="popover"></div>						   
+								   </div>	
+                                    <div class="card-body">
+                                            <h5 class="card-title">Philodendron</h5>
+                                            <p class="card-text"><span>&#8377</span>500</p>
+                                               <button type="button" class="btn btn-add">Add To Cart</button>      
+
+                                    </div>
+                                </div>
+                            </div>  
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                                <div class="card  btn-cardlink">
+                                                    <img src="images/product (9).webp" class="card-img-top" alt="carnations">   
+                                                    <div class="wrapper">
+                                              <div class="icon-wishlist"></div>	
+                                              <div class="popover"></div>					   
+                                          </div>	
+                                                    <div class="card-body">
+                                                            <h5 class="card-title">Carnations</h5>
+                                                            <p class="card-text"><span>&#8377</span>4099</p>
+                                                             <button type="button" class="btn btn-add">Add To Cart</button>       
+                                                    </div>
+                                                </div>
+                                    </div>   
+                                    
+                         <div class="col-12 col-md-6 col-lg-3">
+                             <div class="card btn-cardlink">
+                                 <img src="images/product (32).webp" class="card-img-top" alt="purple shamrock">
+                                       <div class="wrapper">
+									<div class="icon-wishlist"></div>	
+									<div class="popover"></div>						   
+								   </div>	
+                                 <div class="card-body">
+                                         <h5 class="card-title">Purple Shamrock</h5>
+                                         <p class="card-text"><span>&#8377</span>499</p>
+                                            <button type="button" class="btn btn-add">Add To Cart</button>      
+
+                                 </div>
+                             </div>                                          
+                         </div>  
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <div class="card  btn-cardlink">
+                                            <img src="images/product (14).webp" class="card-img-top" alt="delightwraps">
+                                                    <div class="wrapper">
+                                              <div class="icon-wishlist"></div>	
+                                              <div class="popover"></div>					   
+                                          </div>	
+                                            <div class="card-body">
+                                                    <h5 class="card-title">Delight Wrap</h5>
+                                                    <p class="card-text"><span>&#8377</span>1099</p> 
+                                             <button type="button" class="btn btn-add">Add To Cart</button>                                                      </div>
+                                        </div>
+                                    </div>        
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                                <div class="card  btn-cardlink">
+                                                    <img src="images/product (11).webp" class="card-img-top" alt="pinktulipps">   
+                                                    <div class="wrapper">
+                                              <div class="icon-wishlist"></div>	
+                                              <div class="popover"></div>					   
+                                          </div>	
+                                                    <div class="card-body">
+                                                            <h5 class="card-title">Pink Tulips</h5>
+                                                            <p class="card-text"><span>&#8377</span>859</p> 
+                                                             <button type="button" class="btn btn-add">Add To Cart</button>       
+                                                    </div>
+                                                </div>
+                                    </div>        
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                                <div class="card  btn-cardlink">
+                                                       <img src="images/product (24).webp" class="card-img-top" alt="yellowtulips"> 
+                                                    <div class="wrapper">
+                                              <div class="icon-wishlist"></div>	
+                                              <div class="popover"></div>					   
+                                          </div>	
+                                                    <div class="card-body">
+                                                            <h5 class="card-title">Yellow Tulips</h5>
+                                                            <p class="card-text"><span>&#8377</span>849</p> 
+                                                             <button type="button" class="btn btn-add">Add To Cart</button>       
+                                                    </div>
+                                                </div>
+                                    </div>
+                                     
+                         <div class="col-12 col-md-6 col-lg-3">
+                             <div class="card btn-cardlink">
+                                <img src="images/product (16).webp" class="card-img-top" alt="SymphonyCaladium">
+                                       <div class="wrapper">
+									<div class="icon-wishlist"></div>	
+									<div class="popover"></div>						   
+								   </div>	
+                                 <div class="card-body">
+                                         <h5 class="card-title">Symphony Caladium</h5>
+                                         <p class="card-text"><span>&#8377</span>1500</p>
+                                            <button type="button" class="btn btn-add">Add To Cart</button>      
+
+                                 </div>
+                             </div>
+                         </div> 
+
+
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+            
+</main>
+      
+      
+              
+
+           
+<!-- footer -->
+<footer class="premium mt-5 py-5">
+   <div class="social-container">
+  <h2>Connect with us</h2>
+
+  <div class="social-row">
+    <a href="#"><i class="bi bi-facebook social-icons"></i></a>
+    <a href="#"><i class="bi bi-instagram social-icons"></i></a>
+    <a href="#"><i class="bi bi-x social-icons"></i></a>
+  </div>
+</div>
+         <hr>
+
+         <div class="container text-center mt-3 mb-5">
+                 ©2023 <a href="index.html" class="bottomtag">fervour.com</a> All rights reserved.
+          </div>	   
+</footer>	
+
+
+
+
+
+<!-- fixed bottom -->
+
+<div class="section fixed-bottom d-block d-lg-none pb-0" style="z-index: 1;">
+<div class="row text-center">
+<!-- Filter -->
+<button type="button" class="col col-6 border border-1 border-light btn btn-icons py-3"
+    data-bs-toggle="modal" data-bs-target="#exampleModal5" data-bs-whatever="@getbootstrap">
+    <i class="bi bi-funnel-fill"></i> Filters
+</button>
+<!-- Sort -->
+<button type="button" class="col col-6 border border-1 border-light btn btn-icons py-3"
+    data-bs-toggle="modal" data-bs-target="#exampleModal6" data-bs-whatever="@getbootstrap">
+    <i class="bi bi-sort-up"></i> Sort
+</button>
+</div>
+</div></div>
+
+
+<!-- filter md -->
+<div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content py-3">
+            <div class="modal-header d-flex text-start">
+                <h6>Filters</h6>
+                <button type="button" class="btn-close me-1" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div> 
+            <hr>
+            <div class="modal-body">
+                <div class="d-flex text-start">
+                    <div class="nav flex-column nav-pills ms-1" id="filter-tabs" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link active pb-2 py-2 " id="price-tab" data-bs-toggle="pill" data-bs-target="#price-filter" type="button" role="tab">Price</button>
+                        <hr>
+                        <button class="nav-link pb-2 py-2" id="category-tab" data-bs-toggle="pill" data-bs-target="#category-filter" type="button" role="tab">Categories</button>
+                    </div>
+
+                    <div class="tab-content ms-3 active" id="filter-tabs-content">
+                        <!-- Price Filter -->
+                                    <div class="tab-pane fade show active text-start" id="price-filter" role="tabpanel" aria-labelledby="price-tab">
+                                          <div class="form-check form-check ">
+                                            <input class="form-check-input" type="checkbox" id="price1" value="option1">
+                                            <label class="form-check-label" for="price1"><span>&#8377</span>0-999</label>
+                                         </div>
+                                         <br>
+                                          <div class="form-check form-check">
+                                               <input class="form-check-input" type="checkbox" id="price2" value="option2">
+                                               <label class="form-check-label " for="price2"><span>&#8377</span>1000-1999</label>
+                                          </div>
+                                          <br>
+                                          <div class="form-check form-check">
+                                               <input class="form-check-input" type="checkbox" id="price3" value="option3">
+                                               <label class="form-check-label " for="price3"><span>&#8377</span>2000-2499</label>
+                                          </div>
+                                          <br>
+                                          <div class="form-check form-check">
+                                               <input class="form-check-input" type="checkbox" id="price4" value="option4">
+                                               <label class="form-check-label " for="price4"><span>&#8377</span>2500-3499</label>
+                                          </div>                                                        
+                                          <br>
+                                          <div class="form-check form-check">
+                                               <input class="form-check-input" type="checkbox" id="price5" value="option5">
+                                               <label class="form-check-label " for="price5"><span>&#8377</span>3500-3999</label>
+                                          </div>
+                                          <br>
+                                          <div class="form-check form-check">
+                                                <input class="form-check-input" type="checkbox" id="price6" value="option6">
+                                                <label class="form-check-label " for="price6"><span>&#8377</span>4000-5000</label>
+                                          </div>
+                                          <br>
+                                          <div class="form-check form-check">
+                                            <input class="form-check-input" type="checkbox" id="price7" value="option7">
+                                            <label class="form-check-label " for="price7"><span>&#8377</span>5001-10000</label>
+                                          </div>
+                                           <br>
+                                          <div class="form-check form-check">
+                                            <input class="form-check-input" type="checkbox" id="price8" value="option8">
+                                            <label class="form-check-label " for="price8"><span>&#8377</span>10001-20000</label>
+                                          </div>
+                                           <button type="button" class="button btn">Apply</button>                                                                                                                             
+                                    </div>
+                                     
+                            <!-- Categories Filter -->
+                                    <div class="tab-pane fade" id="category-filter" role="tabpanel" aria-labelledby="category-tab">
+                                        <div class="form-check form-check">
+                                            <input class="form-check-input" type="checkbox" id="category1" value="option1">
+                                            <label class="form-check-label" for="category1">Roses</label>
+                                        </div>
+                                        <br>
+                                        <div class="form-check form-check">
+                                            <input class="form-check-input" type="checkbox" id="category2" value="option2">
+                                            <label class="form-check-label" for="category2">Tulips</label>
+                                        </div>
+                                        <br>
+                                        <div class="form-check form-check">
+                                            <input class="form-check-input" type="checkbox" id="category3" value="option3">
+                                            <label class="form-check-label" for="category3">Lily</label>
+                                        </div>
+                                        <br>
+                                        <div class="form-check form-check">
+                                            <input class="form-check-input" type="checkbox" id="category4" value="option4">
+                                            <label class="form-check-label" for="category4">Carnations</label>
+                                        </div>
+                                        <br>
+                                        <div class="form-check form-check">
+                                            <input class="form-check-input" type="checkbox" id="category5" value="option5">
+                                            <label class="form-check-label" for="category5">Others</label>
+                                        </div>                                                        
+                                        <br>
+                                         <button type="button" class="button btn">Apply</button>  
+                                    </div>
+                                </div>
+                        </div>                                                
+                    </div>                                            
+    </div>
+</div>
+</div>
+<!-- sort md -->                            
+<div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content  py-3">
+            <div class="modal-header m-0 border-1 border-bottom border-black p-0">
+                <h6>Sort</h6>
+            </div>     
+            <div class="modal-body p-3">
+                <form>
+                    <div class="form-check text-start">
+                        <input class="form-check-input text-start" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">Recommended</label>
+                    </div>
+                    <div class="form-check text-start">
+                        <input class="form-check-input text-start" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">New</label>
+                    </div>                                               
+                    <div class="form-check text-start">
+                        <input class="form-check-input text-start" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                        <label class="form-check-label" for="flexRadioDefault3">Low to high</label>
+                    </div>
+                    <div class="form-check text-start">
+                        <input class="form-check-input text-start" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                        <label class="form-check-label" for="flexRadioDefault4">High to low</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>                               
+</div>
+
+
+<!-- modals -->
+		 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-fullscreen-md-down modal-dialog-centered">
+			    <div class="modal-content  py-3">
+				    <div class="modal-header p-0 ms-0 pb-3 border-1 border-bottom border-black">
+					    <h6>Login</h6>
+				    </div>
+				    <div class="modal-body">
+							<form>
+							    <div class="mb-3">
+								   <input type="text" name="uname" placeholder="Enter Email"
+									  onblur="return validateForm()" required>
+								   <span id="errorContact"></span>
+                                </div>
+	
+                                <div class="mb-3">
+								   <input type="password" placeholder="Enter Password" name="psw" required>
+                                </div>
+
+								   <input type="submit" value="Login">
+								   <input type="button" value="Cancel" data-bs-dismiss="modal">
+
+							</form>
+				    </div>
+				    <div class="modal-footer">
+					    <span class="signIn"><a href="#">Sign-in</a></span>
+				    </div>
+			    </div>
+			  </div>
+		 </div> 
+
+
+           <!-- location modal-->
+			             <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						     <div class="modal-dialog modal-md modal-dialog-centered">
+                                        <div class="modal-content py-3">
+                                                         <div class="modal-header m-0 border-1 border-bottom border-black p-0">
+                                                                        <h6><i class="bi bi-geo-alt"></i>Location</h6>
+                                                         </div>     
+                                                         <div class="modal-body p-3">
+                                                                      <form>
+                                                                                <input type="text" class="form-control" id="locationInput" placeholder="City / Area">
+
+																<div class="mt-3">
+                                                                                  <input type="text" class="form-control" id="pincode" placeholder="Pin code">
+                                                                                </div>
+
+																<div class="text-end mt-3">
+                                                                                    <input type="submit" class="" value="Submit">
+                                                                                </div>
+														</form>
+                                                         </div>
+                                        </div>
+
+					          </div>
+					   </div>	
+
+
+
+
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-md modal-dialog-centered">
+			    <div class="modal-content  py-3">
+				   <div class="modal-body">
+							 <form class="header-form-search" action="/search" method="get">
+          <input
+            class="formControl"
+            type="text"
+            name="q"
+            title="Search for products, brands"
+            placeholder="Search for products"
+            autocomplete="off">
+
+          <input type="hidden" name="otracker" value="search">
+          <input type="hidden" name="otracker1" value="search">
+          <input type="hidden" name="marketplace" value="FLIPKART">
+          <input type="hidden" name="as-show" value="on">
+          <input type="hidden" name="as" value="off">
+        </form>
+				   </div>
+			    </div>
+			</div>
+		 </div> 
+
+ 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/style.js" defer></script>
+
+</body>
+</html>

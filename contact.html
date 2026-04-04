@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/webp" href="images/fe-ico.webp">
+    <title>Contact Fervour | Order Flowers & Customer Support</title>
+<meta name="description" content="Contact Fervour for flower orders, custom bouquets, bulk requests, or support. Reach us easily through our order and inquiry form for fresh flower delivery across India.">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">  
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>  
+.flower-contact .container{
+  min-height: 100vh;
+  display: flex;
+  gap: 40px;
+  
+}
+
+
+h1 {
+  font-size: 3.3rem;
+  color: var(--headingcta);
+  font-weight: bold;
+}
+
+.form-card {
+  position: relative;
+  background: var(--banner);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 3px 7px var( --subheading);
+  overflow: hidden;
+}
+
+.form-card * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  background: var(--bg1);
+  border-radius: 12px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.tab {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 500;
+  color:var(--headingcta);
+}
+
+.tab.active {
+  background: var(--headingcta);
+  color: #fff;
+}
+
+
+/* Forms */
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block;
+}
+
+.flower-form  .row {
+  display: flex;
+  gap: 15px;
+}
+
+.form .btn {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 1280px) and (min-width: 1025px){
+
+  section .flower-contact{
+    margin-top: 7rem;
+}
+
+  .flower-contact .container {
+     align-items: start;
+  justify-content: start;
+    width: 100%;
+  }
+}
+
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 1024px) {
+
+
+
+  .flower-contact .container {
+    flex-direction: column;
+     align-items: start;
+  justify-content: start;
+    width: 100%;
+  }
+
+  .flower-info,
+  .flower-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+    h1 {
+  font-size: 2rem
+  }
+}
+
+</style>
+
+</head>
+<body class="websitebg">
+
+
+<header class="sticky-top">
+  <nav class="navbar bg-white border-bottom" id="navbar">
+
+    <!-- ================= ROW 1 ================= -->
+    <div class="container d-flex align-items-center justify-content-between py-2">
+
+      <!-- LEFT: LOGO + DELIVERY -->
+      <div class="d-flex align-items-center gap-3">
+         <a href="index.html" class="navbar-brand m-0">
+                 <img
+                   src="images/logo.webp"
+                   alt="Fervour Logo"
+                   width="150"
+                   height="90"
+                   loading="eager"
+                   fetchpriority="high">
+        </a>
+
+        <!-- DELIVERY (DESKTOP) -->
+        <button
+          type="button"
+          class="btn  d-none d-lg-block"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal2"
+          aria-label="Delivery Location">
+          Where to deliver? <i class="bi bi-geo-alt"></i>
+        </button>
+      </div>
+
+      <!-- CENTER: SEARCH (DESKTOP) -->
+      <div class="d-none d-md-block flex-grow-1 px-4">
+        <form class="header-form-search" action="/search" method="get">
+          <input
+            class="formControl"
+            type="text"
+            name="q"
+            title="Search for products, brands"
+            placeholder="Search for products"
+            autocomplete="off">
+
+          <input type="hidden" name="otracker" value="search">
+          <input type="hidden" name="otracker1" value="search">
+          <input type="hidden" name="marketplace" value="FLIPKART">
+          <input type="hidden" name="as-show" value="on">
+          <input type="hidden" name="as" value="off">
+        </form>
+      </div>
+
+
+      <!-- RIGHT: DESKTOP ICONS -->
+      <div class="d-none d-md-flex align-items-center gap-3">
+        <button
+          class="sick-icons"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          aria-label="Account">
+          <i class="bi bi-person"></i>
+        </button>
+
+        <a href="cart.html" class="sick-icons" aria-label="Cart">
+          <i class="bi bi-cart"></i>
+        </a>
+      </div>
+
+      <!-- MOBILE: SEARCH + TOGGLER -->
+      <div class="d-flex d-md-none align-items-center gap-2 ms-auto">
+
+        <!-- SEARCH -->
+        <button
+          class="sick-icons"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal1"
+          aria-label="Search">
+          <i class="bi bi-search"></i>
+        </button>
+
+        <!-- HAMBURGER -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ================= ROW 2 ================= -->
+    <div class="container d-none d-md-flex justify-content-center border-top">
+      <ul class="navbar-nav flex-row gap-4 py-2">
+        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="occasion-main.html">Occasion</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- ================= OFFCANVAS MOBILE MENU ================= -->
+    <div class="offcanvas offcanvas-end d-md-none" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav gap-2">
+ 
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="occasion-main.html">Occasion</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="exotic.html">Exotic</a></li>
+
+          <hr>
+
+          <li class="nav-item"><a class="nav-link" href="#">My Orders</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">My Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">My Wishlist</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">My Account</a></li>
+
+          <hr>
+
+          <li class="nav-item"><a class="nav-link" href="#">Legal</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Log Out</a></li>
+
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+</header>
+
+
+
+
+
+
+
+<main>
+
+   <!-- breadcrumb -->
+        <section class="breadcrumb">
+             <div class="container py-3">
+              <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item text-primary"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                  </ol>
+                </nav>
+           </div>
+        </section>
+
+
+
+
+<section class="flower-contact">
+  <div class="container">
+    <div class="row">
+
+      <!-- Flower Info Section -->
+      <div class="flower-info col-12 col-md-5">
+        <h2>Bloom with Us</h2>
+        <p>
+          Have a special request or need help choosing the perfect bouquet?
+          We’re here to make every moment beautiful.
+        </p>
+
+        <div class="info">
+          <p>📍 Fresh flowers delivered with love</p>
+          <p><a href="tel:+91987654****">📞 +91 98765 4****</a></p>
+          <p><a href="mailto:buy@fervourshop@gmail.com">📧 buy@fervourshop@gmail.com</a></p>
+        </div>
+      </div>
+
+      <!-- Flower Form Section -->
+      <div class="flower-form  col-12 col-md-6 ms-auto">
+        <h2>Order & Inquiry Form</h2>
+
+        <div class="form-card">
+          <!-- Tabs -->
+          <div class="tabs">
+            <button class="tab active" data-tab="order">Order Request</button>
+            <button class="tab" data-tab="inquiry">General Inquiry</button>
+          </div>
+
+          <!-- Order Request Form -->
+          <form id="order" class="form active">
+            <div class="row">
+              <input type="text" placeholder="Your Name" required />
+
+              <!-- Phone & Email -->
+              <div class="row-inline">
+                <input type="tel" placeholder="Phone Number" required />
+                <input type="email" placeholder="Email Address" required />
+              </div>
+
+              <!-- Flower Type & Occasion -->
+              <div class="row-inline">
+                <select required>
+                  <option selected disabled>Select Flower Type</option>
+                  <option>Roses</option>
+                  <option>Lilies</option>
+                  <option>Orchids</option>
+                  <option>Carnations</option>
+                  <option>Custom Arrangement</option>
+                </select>
+
+                <select required>
+                  <option selected disabled>Occasion</option>
+                  <option>Birthday</option>
+                  <option>Anniversary</option>
+                  <option>Wedding</option>
+                  <option>Funeral</option>
+                  <option>Valentine’s Day</option>
+                </select>
+              </div>
+
+              <!-- Date & Delivery Location -->
+              <input type="date" required />
+              <input type="text" placeholder="Delivery Location" required />
+
+              <!-- Message -->
+              <textarea rows="4" placeholder="Message / Custom Request"></textarea>
+
+              <!-- Payment Section -->
+              <div class="payment-section">
+                <p><strong>Payment Method</strong></p>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                  <label class="form-check-label" for="creditCard">Credit / Debit / ATM</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="upi">
+                  <label class="form-check-label" for="upi">UPI</label>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-buttons mt-3 ">
+                <input type="submit" value="Request a Quote" class="btn w-50 w-lg-auto">
+              </div>
+            </div>
+          </form>
+
+          <!-- General Inquiry Form -->
+          <form id="inquiry" class="form">
+            <div class="row">
+              <input type="text" placeholder="Your Name" required />
+              <input type="email" placeholder="Email Address" required />
+
+              <select required>
+                <option selected disabled>Inquiry Type</option>
+                <option>Order Status</option>
+                <option>Custom Order</option>
+                <option>Bulk Order</option>
+                <option>Event</option>
+                <option>Partnership / Business</option>
+                <option>Other</option>
+              </select>
+
+              <textarea rows="4" placeholder="Your Message" name="message"></textarea>
+
+              <div class="form-buttons mt-3">
+                <input type="submit" value="Send Inquiry" class="btn w-50 w-lg-auto">
+              </div>
+             
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+</main>
+
+
+           
+           
+
+           
+<!-- footer -->
+<footer class="premium mt-5 py-5">
+   <div class="social-container">
+  <h2>Connect with us</h2>
+
+  <div class="social-row">
+    <a href="#"><i class="bi bi-facebook social-icons"></i></a>
+    <a href="#"><i class="bi bi-instagram social-icons"></i></a>
+    <a href="#"><i class="bi bi-x social-icons"></i></a>
+  </div>
+</div>
+         <hr>
+
+         <div class="container text-center mt-3 mb-5">
+                 ©2023 <a href="index.html" class="bottomtag">fervour.com</a> All rights reserved.
+          </div>	   
+</footer>	
+
+
+<!-- modals -->
+		 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-fullscreen-md-down modal-dialog-centered">
+			    <div class="modal-content  py-3">
+				    <div class="modal-header p-0 ms-0 pb-3 border-1 border-bottom border-black">
+					    <h6>Login</h6>
+				    </div>
+				    <div class="modal-body">
+							<form>
+							    <div class="mb-3">
+								   <input type="text" name="uname" placeholder="Enter Email"
+									  onblur="return validateForm()" required>
+								   <span id="errorContact"></span>
+                   </div>
+	
+                   <div class="mb-3">
+								   <input type="password" placeholder="Enter Password" name="psw" required>
+                   </div>
+
+								   <input type="submit" value="Login">
+								   <input type="button" value="Cancel" data-bs-dismiss="modal">
+
+							</form>
+				    </div>
+				    <div class="modal-footer">
+					    <span class="signIn"><a href="#">Sign-in</a></span>
+				    </div>
+			    </div>
+			  </div>
+		 </div> 
+
+       <!-- location modal-->
+			             <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						     <div class="modal-dialog modal-md modal-dialog-centered">
+                                        <div class="modal-content py-3">
+                                                         <div class="modal-header m-0 border-1 border-bottom border-black p-0">
+                                                                        <h6><i class="bi bi-geo-alt"></i>Location</h6>
+                                                         </div>     
+                                                         <div class="modal-body p-3">
+                                                                      <form>
+                                                                                <input type="text" class="form-control" id="locationInput" placeholder="City / Area">
+
+																<div class="mt-3">
+                                                                                  <input type="text" class="form-control" id="pincode" placeholder="Pin code">
+                                                                                </div>
+
+																<div class="text-end mt-3">
+                                                                                    <input type="submit" class="" value="Submit">
+                                                                                </div>
+														</form>
+                                                         </div>
+                                        </div>
+
+					          </div>
+					   </div>	
+
+
+
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-md modal-dialog-centered">
+			    <div class="modal-content  py-3">
+				   <div class="modal-body">
+							 <form class="header-form-search" action="/search" method="get">
+          <input
+            class="formControl"
+            type="text"
+            name="q"
+            title="Search for products, brands"
+            placeholder="Search for products"
+            autocomplete="off">
+
+          <input type="hidden" name="otracker" value="search">
+          <input type="hidden" name="otracker1" value="search">
+          <input type="hidden" name="marketplace" value="FLIPKART">
+          <input type="hidden" name="as-show" value="on">
+          <input type="hidden" name="as" value="off">
+        </form>
+				   </div>
+			    </div>
+			</div>
+		 </div> 
+
+ 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/style.js" defer></script>
+
+</body>
+</html>
